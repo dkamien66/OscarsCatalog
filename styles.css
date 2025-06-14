@@ -1,0 +1,41 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .year-bar {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px;
+    background-color: #000;
+    color: white;
+  }
+  
+  .year-btn {
+    flex: 0 0 auto;
+    margin-right: 10px;
+    padding: 10px 20px;
+    background-color: #444;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .year-btn:hover {
+    background-color: #777;
+  }
+  
+  #content {
+    padding: 20px;
+  }
+  
+h1 {
+  text-align: center
+}
+
+section:hover {
+  background-color: #F0F8FF
+}
