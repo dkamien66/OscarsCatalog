@@ -2,6 +2,7 @@ const content = document.getElementById('content')
 
 const award_data = {
     "2025": {
+        main_link: "https://www.oscars.org/oscars/ceremonies/2025",
         best_actor_link: "https://youtube.com/embed/u8-8PYURHdY",
         best_actor_details: "Adrien Brody in 'The Brutalist'",
         best_actress_link: "https://youtube.com/embed/Ni44FwTgvzo",
@@ -25,7 +26,14 @@ document.querySelectorAll('.year-btn').forEach(button => {
 
         if (data) {
             content.innerHTML = `
-                <h1>Awards for ${year}</h1>
+                <h1>
+                    Awards for ${year}
+                    <br>
+                    <a style="font-size: 14px" href="${data.main_link}">
+                        Click here for details
+                    </a>
+                </h1>
+
                 <section>
                     <iframe width="420" height="315" src="${data.best_actor_link}"></iframe>
                     <h2>Best Actor: ${data.best_actor_details}</h2>
