@@ -63,3 +63,20 @@ document.querySelectorAll('.year-btn').forEach(button => {
         }
     });
 });
+
+function goLeft() {
+    const container = document.getElementsByClassName("year-scroll-container")[0];
+    console.log("left")
+    container.scrollLeft -= 100;
+}
+  
+function goRight() {
+    const container = document.getElementsByClassName("year-scroll-container")[0];
+    console.log("right")
+    container.scrollLeft += 100;
+}
+
+window.addEventListener("load", function () {
+    const container = document.getElementsByClassName("year-scroll-container")[0];
+    container.scrollLeft = container.scrollWidth;
+  });
