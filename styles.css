@@ -7,6 +7,7 @@ body {
 .year-selector {
   display: flex;                    /* Makes children sit side by side */
   justify-content: space-between;
+  align-items: center;      /* Centers children items vertically*/  
 }
   
 .year-scroll-container {
@@ -23,7 +24,7 @@ body {
 }
 
 .year-scroll-container::-webkit-scrollbar {
-  display: none;                 /* Chrome, Safari, Opera */
+  display: none;               /* Remove visual scrollbar, but still allows scrolling */
 }
 
 .arrow {
@@ -53,13 +54,29 @@ body {
 h1 {
   text-align: center
 }
-
+section {
+  display: flex;
+  white-space: pre;
+}
 section:hover {
   background-color: #F0F8FF
+}
+section h2 {
+  font-size: 37px;
+}
+section.right-aligned {
+  text-align: right;
+}
+section.left-aligned {
+  text-align: left;
 }
 
 img {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+h2.left-aligned {
+  text-align: left;
 }
