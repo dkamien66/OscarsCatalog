@@ -2,29 +2,62 @@ body {
   font-family: 'Times New Roman', Times, serif;
   margin: 0;
   padding: 0;
+  background: linear-gradient(135deg, #FFD700 0%, #FFFFFF 50%, #FFD700 100%);
+  min-height: 100vh;
 }
-  
+
+#logo {
+  display: block;
+  margin: 20px auto;
+  transition: transform 0.3s ease;
+}
+
+#logo:hover {
+  transform: scale(1.1);
+}
+
 .year-selector {
-  display: flex;                    /* Makes children sit side by side */
+  display: flex;
   justify-content: space-between;
-  align-items: center;      /* Centers children items vertically*/  
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
 }
-  
+
 .year-scroll-container {
-  width: 100vw;               /* full screen width */
-  display: flex;              /* Makes children sit side by side */
-  overflow-x: auto;         
-  white-space: nowrap;        /* Prevent line breaks */
-  scroll-behavior: smooth;    /* Smooth scrolling effect */
-  gap: 70px;                  /* Space between year buttons */
+  width: 100vw;
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  gap: 70px;
   padding: 10px 0;
   list-style-type: none;
-  border-color: black;
-  border-style: solid;
+  border: 2px solid #DAA520;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .year-scroll-container::-webkit-scrollbar {
   display: none;               /* Remove visual scrollbar, but still allows scrolling */
+}
+
+.year-btn {
+  font-size: 26px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  box-shadow: 5px 5px 10px #d9d9d9, -5px -5px 10px #ffffff;
+}
+
+.year-btn:hover {
+  color: #DAA520;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(218, 165, 32, 0.3);
 }
 
 .arrow {
@@ -32,6 +65,13 @@ body {
   height: 50px;
   padding: 0;
   border: none;
+  background: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.arrow:hover {
+  transform: scale(1.1);
 }
 
 .arrow img {
@@ -40,35 +80,66 @@ body {
   pointer-events: none;
 }
 
-.year-btn {
-  font-size: 26px;
-}
-.year-btn:hover {
-  color: goldenrod;
-}
-  
 #content {
   padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-  
+
 h1 {
-  text-align: center
+  text-align: center;
+  color: #2c3e50;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 section {
   display: flex;
   white-space: pre;
+  margin: 30px 0;
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
+
 section:hover {
-  background-color: #F0F8FF
+  background-color: #F0F8FF;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
+
 section h2 {
   font-size: 37px;
+  color: #2c3e50;
+  margin: 0;
+  padding: 10px;
 }
+
 section.right-aligned {
   text-align: right;
 }
+
 section.left-aligned {
   text-align: left;
+}
+
+iframe {
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+a {
+  color: #DAA520;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #B8860B;
+  text-decoration: underline;
 }
 
 img {
